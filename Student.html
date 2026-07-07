@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data Management</title>
+</head>
+<body>
+<script>
+if (sessionStorage.getItem("loggedIn") !== "true") {
+    window.location.href = "login.html";
+}
+</script>
+    <button onclick="logout()">Logout</button>
+<nav>
+    <h2>Student Data Management</h2>
+
+    <div class="right">
+        <input type="text" id="search" placeholder="Search Student">
+        <button onclick="search()">Search</button>
+    </div>
+</nav>
+
+<br><br>
+
+<form id="studentForm">
+
+    <input type="text" id="name" placeholder="Enter Name" required>
+
+    <input type="number" id="age" placeholder="Enter Age" required>
+
+    <input type="text" id="course" placeholder="Enter Course" required>
+
+    <button type="submit">Add Student</button>
+
+</form>
+
+<table border="1" cellpadding="10" width="1000">
+
+<thead>
+
+<tr>
+
+<th>Name</th>
+<th>Age</th>
+<th>Course</th>
+<th>Action</th>
+<th>Edit</th>
+
+</tr>
+
+</thead>
+
+<tbody id="studentTable">
+
+</tbody>
+
+</table>
+
+<script src="stu.js"></script>
+
+</body>
+</html>
