@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json Example</title>
+</head>
+<body>
+    <!--
+    JSON ---javaScript Object Notation
+    -- lightweight data interchange format
+
+    it is used to exchange data:
+    1.client(browser)
+    2.Server(backend)
+    3.API's
+    4.Datbases
+    
+    JSON ---rules
+    1.Dat should be stored in key value pairs
+    2.Key must be strings
+    3.Values can be strings,numbers,booleans,null,objects or arrays
+
+    -->
+
+    <script>
+        //JSON.PARSE()
+        //JSON string ---converted
+        //Javascript object
+        //Syntax: JSON.parse(jsonstring)
+
+        let jsonData =`{"name":"Rahul","age":22}`;
+        let student =JSON.parse(jsonData);
+        console.log(student)
+        console.log(student.name)
+
+        //Nested JSON
+        let data = `{"Name":"Anas","address":{"city":"Hyd"}}`;
+        let student1 = JSON.parse(data)
+        console.log(student1)
+
+        //JSON.stringify()
+        //js object will be converted to    json    string
+        let faculty = {
+            name:"Anas",
+            age:21
+        }
+        let json = JSON.stringify(faculty)
+        console.log(json)
+        //Fetch API
+        // `
+        //  //allows two applications to communicate with each other
+        // //customer
+        // //frontened
+        // //API
+        // //backend
+        // //database
+
+        // Fetch APi: built in js method
+        // it is used to make HTTP requests to server
+
+        // HTTP Methods:
+        // 1.GET == retreive data
+        // 2.POSt == Send/Create data
+        // 3.PUT == Updating the data
+        // 4.DELETE == deleting the data
+        // `
+        //GET request:
+        fetch("https://jsonplaceholder.typicode.com/users")
+        .then((response)=>{
+            return response.json();
+        })
+        .then((data=>
+        console.log(data)
+        ))
+
+    </script>
+</body>
+</html>
