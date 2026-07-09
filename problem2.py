@@ -2,7 +2,6 @@ s = input()
 
 num = ""
 max_num = -1
-
 for ch in s:
     if ch.isdigit():
         num += ch
