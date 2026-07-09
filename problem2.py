@@ -13,5 +13,4 @@ for ch in s:
 if num:
     if '9' not in num:
         max_num = max(max_num, int(num))
-
 print(max_num)
