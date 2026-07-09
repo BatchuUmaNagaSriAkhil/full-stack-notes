@@ -7,7 +7,6 @@ onButton.addEventListener("click", function() {
     lightbulb.style.borderColor = "yellow";
     lightbulb.style.backgroundColor = "lightyellow";
 });
-
 offButton.addEventListener("click", function() {
     isOn = false;
     lightbulb.style.borderColor = "black";
