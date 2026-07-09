@@ -4,7 +4,6 @@ def unique_digits(num):
 L = int(input())
 R = int(input())
 count = 0
-
 for i in range(L, R + 1):
     if unique_digits(i):
         count += 1
