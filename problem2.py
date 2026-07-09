@@ -10,7 +10,6 @@ for ch in s:
             if '9' not in num:
                 max_num = max(max_num, int(num))
             num = ""
-
 if num:
     if '9' not in num:
         max_num = max(max_num, int(num))
