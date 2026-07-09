@@ -7,7 +7,6 @@ count = 0
 for i in range(L, R + 1):
     if unique_digits(i):
         count += 1
-
 if count == 0:
     print("NoUnique Number")
 else:
