@@ -1,7 +1,6 @@
 def unique_digits(num):
     s = str(num)
     return len(s) == len(set(s))
-
 L = int(input())
 R = int(input())
 
