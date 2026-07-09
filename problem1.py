@@ -3,7 +3,6 @@ def unique_digits(num):
     return len(s) == len(set(s))
 L = int(input())
 R = int(input())
-
 count = 0
 
 for i in range(L, R + 1):
